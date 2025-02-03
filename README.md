@@ -32,13 +32,15 @@ Run the scraper script to scrape data:
 <br>
 Note: This might take a few seconds.
 
+Once finished, exit the Python console by using the following command:
+
+`exit()`
+
 ### 6. Run the Data Manipulation Script
 
 After scraping, run the script to perform matching service:
 
 `python -i matching-service.py`
-
-### 7. Exit Python Console
 
 Once finished, exit the Python console by using the following command:
 
@@ -49,3 +51,9 @@ Once finished, exit the Python console by using the following command:
 Deactivate the Conda environment with the following command:
 
 `conda deactivate myenv`
+
+Current stats:
+
+Matched 16 reviews by name and last name.
+Matched 95 reviews by first name only.
+Matched 95 reviews by last name only.
