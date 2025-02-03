@@ -1,0 +1,5 @@
+# Ignore the raw data folder
+data/raw/
+
+# Ignore the processed data folder
+data/processed/
