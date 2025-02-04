@@ -50,14 +50,16 @@ for page_number in range(1, constants.MAX_PAGE_NUMBER + 1):
     
         review_submission_date_time_tag = review_contents.find("time")
         review_submission_date_time = parse_date(review_submission_date_time_tag.text.strip()) if review_submission_date_time_tag else "N/A"
-        review_date, review_time = review_submission_date_time.split()
-
+        
+        review_date, review_time = str(review_submission_date_time).split()
 
         reviews_list.append({
-            "Name": first_name,
+            "Item": first_name,
             "Last Name": last_name,
-            "Review Date": review_date, 
-            "Score": review_score
+            "Email": "",  
+            "Date Entered": review_date, 
+            "Approved?": "Approved", 
+            "Staff": ""
         })
 
 

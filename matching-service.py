@@ -18,13 +18,13 @@ students_df = students_df[2:].reset_index(drop=True)
 students_df['Name'] = students_df['Name'].str.lower()
 students_df['Last Name'] = students_df['Last Name'].str.lower()
 
-reviews_df['Name'] = reviews_df['Name'].str.lower()
+reviews_df['Item'] = reviews_df['Item'].str.lower()
 reviews_df['Last Name'] = reviews_df['Last Name'].str.lower()
 
 #Match By Name and Last Only 
 match_df_1 = pd.merge(students_df, reviews_df, 
                      left_on=['Name', 'Last Name'], 
-                     right_on=['Name', 'Last Name'], 
+                     right_on=['Item', 'Last Name'], 
                      how='inner')
 
 match_df_1 = match_df_1.drop_duplicates(subset=["Name", "Last Name"])
@@ -35,7 +35,7 @@ print(f"Matched {len(match_df_1)} reviews by name and last name. Dataset saved t
 #Match By Name Only 
 match_df_2 = pd.merge(students_df, reviews_df, 
                      left_on=['Name'], 
-                     right_on=['Name'], 
+                     right_on=['Item'], 
                      how='inner')
 
 match_df_2 = match_df_2.drop_duplicates(subset=["Name", "Last Name_x"])

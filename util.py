@@ -4,6 +4,9 @@ import os
 def parse_date(text):
     now = datetime.now()
 
+    if "A day" in text: 
+        return datetime.today() - timedelta(days=1)
+    
     if "ago" in text:
         parts = text.split()
         number = int(parts[0])
