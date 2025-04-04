@@ -3,3 +3,6 @@ data/raw/
 
 # Ignore the processed data folder
 data/processed/
+
+
+update_monday_channels.py
